@@ -60,7 +60,6 @@ int main(int argc, char **argv)
     if (argv[1] != NULL)
     {
       filename = concat(argv[1], de->d_name);
-      printf("filename: %s", filename);
     }
     else
     {
@@ -75,7 +74,7 @@ int main(int argc, char **argv)
     }
     else if (de->d_type == DT_DIR)
     {
-      printf("%s\n", de->d_name);
+      printf("%s -- %10s\n", de->d_name, "<DIR>");
     }
     else
     {

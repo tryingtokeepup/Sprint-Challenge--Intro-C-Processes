@@ -19,4 +19,8 @@ A zombie process is simply a process that is done executing and is ready to be t
 
 **3. How does a zombie process get created? How does one get destroyed?**
 
+Zombie processes are typically created when a process, especially a child process, is done excecuting its commands, and is waiting to be terminated by the parent process. In this state, the child process is unkillable, even with the `kill` command. The parent would need to finish its proceedures and instructions, and start cleaning up its forked child processes. In that span of time, the child process would be a zombie, until it is destroyed.
+
 **4. What are some of the benefits of working in a compiled language versus a non-compiled language? More specifically, what benefits are there to be had from taking the extra time to compile our code?**
+
+The big difference of this is in the idea behind interpreted versus compiled. For example, in Python and Javascript, you need those as middlemen to run your python and javascript scripts and programs; for C, it is directly compiled into machine code and fed into the CPU, bypasses any middleman and thus running much faster than other languages. Add on to this the fact that C is incredibly terse and light-weight, and you have a blazing fast language that you can work with.
